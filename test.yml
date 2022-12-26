@@ -1,0 +1,23 @@
+name: Ali
+age: 28
+address: "5397 app: yes"
+active: true
+key:
+  bob: value1
+  bob2: value2
+  key2:
+    bob3: value3
+jsonObject: {key: value, key2: value2, key3: {key4: value4}}
+arrayKey:
+  - item1
+  - item2
+  - { key: value }
+jsonArray: [item1, item2]
+objectsArray:
+  - key: value
+    key1: value2
+  - key3: value3
+longText: |
+  asdfasfdasdfsadf asdfasfdasdfsadf
+  asdfsadf asdfasdf asdfasdf asdfasdf
+  asdfasdf fgnhnfgh fgnhnfgh 
