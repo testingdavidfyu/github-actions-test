@@ -2,7 +2,7 @@ name: Context testing
 on: [push, pull_request]
 
 jobs:
-  functions: 
+  functions:
     runs-on: ubuntu-latest
     steps:
       - name: dump
