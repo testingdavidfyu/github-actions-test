@@ -1,26 +1,5 @@
 name: Actions Workflow
-
-on:
-  push:
-    branches:
-      - master
-      - 'feature/*' # astericks * matches anything up until forward slash /
-      - 'feature/**' # mathches forward slash too
-      - '!feature/featC' # ignores this branch
-    tags:
-      - v1.*
-    paths:
-      - '**.js' # which files to match in our repo
-      - '!filename.js'
-
-  # repository_dispatch:
-  #   types: [build]
-  # schedule:
-  #   - cron: "0/5 * * * *"
-  #   - cron: "0/6 * * * *"
-  # push:
-  # pull_request:
-  #   types: [closed, assigned, opened, reopened]
+on: pull_request
 
 jobs:
   run-github-actions:
