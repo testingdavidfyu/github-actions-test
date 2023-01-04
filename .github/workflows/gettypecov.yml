@@ -1,6 +1,11 @@
 name: Container
 on: push
 
+# on:
+#   push:
+#     branches: 
+#       - main
+
 jobs:
   update-type-coverage:
     runs-on: ubuntu-latest
@@ -8,11 +13,8 @@ jobs:
       - name: Calculate Type Coverage 
         run: |
           TYPE_COV_RES=$(npx type-coverage | head -1)
-          arr=($TYPE_COV_RES)
-          echo ${arr[3]}
-          
-
-          echo "action_state=$( echo ${arr[3]} )" >> $GITHUB_ENV
+          TYPE_COV_ARR=($TYPE_COV_RES)
+          echo "action_state=$( echo ${TYPE_COV_ARR[3]} )" >> $GITHUB_ENV
 
           # echo "text<<EOF" >> $GITHUB_ENV
           # TYPE_COV_RES=$(npx type-coverage)
@@ -32,3 +34,4 @@ jobs:
           filename: test_badge.json
           label: type-coverage
           message: ${{ env.action_state }}
+          color: blue
