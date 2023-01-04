@@ -8,7 +8,7 @@ jobs:
       - name: Calculate Type Coverage 
         run: |
           echo "::set-output name=NODE_VERSION::$(
-            echo hello
+            npx type-coverage
           )"
         id: coverageResult
       - name: Create Awesome Badge
