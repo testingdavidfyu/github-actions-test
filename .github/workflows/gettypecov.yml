@@ -7,8 +7,11 @@ jobs:
     steps:
       - name: Calculate Type Coverage 
         run: |
-          echo "action_state=$( echo hellothere )" >> $GITHUB_ENV
+          TYPE_COV_RES=$(npx type-coverage)
+          echo $TYPE_COV_RES
 
+
+          # echo "action_state=$( echo hellothere\n )" >> $GITHUB_ENV
 
 
           # echo "text<<EOF" >> $GITHUB_ENV
