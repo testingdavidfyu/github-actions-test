@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Calculate Type Coverage 
         run: |
-          TYPE_COV_RES=$(npx type-coverage | head -1 | cut -d " " -f $N)
+          TYPE_COV_RES=$(npx type-coverage | head -1)
           echo $TYPE_COV_RES
 
           arr = ($TYPE_COV_RES)
