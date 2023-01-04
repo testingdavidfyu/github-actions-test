@@ -20,6 +20,7 @@
   "homepage": "https://github.com/testingdavidfyu/github-actions-test#readme",
   "devDependencies": {
     "@codechecks/client": "^0.1.12",
+    "type-coverage": "^2.24.1",
     "typecov": "^0.2.3"
   },
   "dependencies": {
