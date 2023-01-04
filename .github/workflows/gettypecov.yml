@@ -25,7 +25,6 @@ jobs:
           # echo "::set-output name=NODE_VERSION::$(
           #   npx type-coverage
           # )"
-        id: coverageResult
       - name: Create Awesome Badge
         uses: schneegans/dynamic-badges-action@v1.6.0
         with:
