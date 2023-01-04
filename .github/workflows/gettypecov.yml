@@ -10,7 +10,7 @@ jobs:
           TYPE_COV_RES=$(npx type-coverage | head -1)
           echo $TYPE_COV_RES
 
-          arr = ($TYPE_COV_RES)
+          arr=($TYPE_COV_RES)
           echo $arr 
           echo ${arr[3]}
 
