@@ -7,11 +7,14 @@ jobs:
     steps:
       - name: Calculate Type Coverage 
         run: |
-          echo "text<<EOF" >> $GITHUB_ENV
-          TYPE_COV_RES=$(npx type-coverage)
-          echo "action_state=$TYPE_COV_RES" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          echo "action_state=$( echo hellothere )" >> $GITHUB_ENV
 
+
+
+          # echo "text<<EOF" >> $GITHUB_ENV
+          # TYPE_COV_RES=$(npx type-coverage)
+          # echo "action_state=$TYPE_COV_RES" >> $GITHUB_ENV
+          # echo "EOF" >> $GITHUB_ENV
 
           # echo "action_state=$( echo hello )" >> $GITHUB_ENV
           # echo "::set-output name=NODE_VERSION::$(
