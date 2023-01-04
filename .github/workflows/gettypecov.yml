@@ -9,7 +9,7 @@ jobs:
         run: |
           TYPE_COV_RES=$(npx type-coverage | head -1)
           echo $TYPE_COV_RES
-          echo "action_state=$( $TYPE_COV_RES )" >> $GITHUB_ENV
+          echo "action_state=$TYPE_COV_RES" >> $GITHUB_ENV
 
           # echo "text<<EOF" >> $GITHUB_ENV
           # TYPE_COV_RES=$(npx type-coverage)
