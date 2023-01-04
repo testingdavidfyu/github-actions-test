@@ -8,13 +8,14 @@ jobs:
       - name: Calculate Type Coverage 
         run: |
           TYPE_COV_RES=$(npx type-coverage | head -1)
-          arr = ($TYPE_COV_RES)
+          # echo $TYPE_COV_RES
+          arr=($TYPE_COV_RES)
+          # echo $arr 
           echo ${arr[3]}
-
-          # echo "action_state=$(echo ${TYPE_COV_RES_ARR[3]})" >> $GITHUB_ENV
 
 
           # echo "action_state=$TYPE_COV_RES" >> $GITHUB_ENV
+
           # echo "text<<EOF" >> $GITHUB_ENV
           # TYPE_COV_RES=$(npx type-coverage)
           # echo "action_state=$TYPE_COV_RES" >> $GITHUB_ENV
