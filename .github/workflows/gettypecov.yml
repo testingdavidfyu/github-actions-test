@@ -7,9 +7,10 @@ jobs:
     steps:
       - name: Calculate Type Coverage 
         run: |
-          echo "::set-output name=NODE_VERSION::$(
-            npx type-coverage
-          )"
+          echo "action_state=yellow" >> $GITHUB_ENV
+          # echo "::set-output name=NODE_VERSION::$(
+          #   npx type-coverage
+          # )"
         id: coverageResult
       - name: Create Awesome Badge
         uses: schneegans/dynamic-badges-action@v1.6.0
@@ -18,4 +19,4 @@ jobs:
           gistID: 1286086cc3b0f81c85f4bed9b9d00f81
           filename: test_badge.json
           label: type-coverage
-          message: ${{ steps.coverageResult.outputs.NODE_VERSION }}
+          message: ${{ env.action_state }}
