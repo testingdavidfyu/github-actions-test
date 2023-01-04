@@ -5,6 +5,10 @@ jobs:
   update-type-coverage:
     runs-on: ubuntu-latest
     steps:
+      - name: Calculate Type Coverage 
+        run: |
+          echo "whattup" >> $GITHUB_OUTPUT
+        id: coverageResult
       - name: Create Awesome Badge
         uses: schneegans/dynamic-badges-action@v1.6.0
         with:
@@ -12,5 +16,4 @@ jobs:
           gistID: 1286086cc3b0f81c85f4bed9b9d00f81
           filename: test_badge.json
           label: type-coverage
-          message: 14.50
-
+          message: ${{join(steps.coverageResult.outputs.*, '\n')}}
