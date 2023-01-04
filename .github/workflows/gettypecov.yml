@@ -9,7 +9,8 @@ jobs:
         run: |
           TYPE_COV_RES=$(npx type-coverage | head -1)
           TYPE_COV_RES_ARR = ($TYPE_COV_RES)
-          echo "action_state=${TYPE_COV_RES_ARR[3]}" >> $GITHUB_ENV
+
+          echo "action_state=$(echo ${TYPE_COV_RES_ARR[3]})" >> $GITHUB_ENV
 
 
           # echo ${arr[3]}
