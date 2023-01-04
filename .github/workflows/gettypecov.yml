@@ -11,4 +11,6 @@ jobs:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: 1286086cc3b0f81c85f4bed9b9d00f81
           filename: test_badge.json
-          typeCoverage: 14.50
+          label: type-coverage
+          message: 14.50
+
